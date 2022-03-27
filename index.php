@@ -21,8 +21,12 @@ foreach ($text as $letter) {
 
 $lines = array();
 
+for ($line = 0; $line < 9; $line += 1) {
+    $lines[$line] = '';
+}
+
 foreach ($letters as $letter) {
-    $letter_lines = explode("\n", $letter); 
+    $letter_lines = explode("\n", $letter);
     for ($line = 0; $line < count($letter_lines); $line += 1) {
         $lines[$line] .= $letter_lines[$line];
     }
@@ -31,5 +35,5 @@ foreach ($letters as $letter) {
 header("Content-Type: text-plain");
 
 foreach ($lines as $line) {
-    echo $line . "\n";
+    echo $line;
 }
