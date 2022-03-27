@@ -35,5 +35,5 @@ foreach ($letters as $letter) {
 header("Content-Type: text-plain");
 
 foreach ($lines as $line) {
-    echo $line;
+    echo $line . "\n";
 }
